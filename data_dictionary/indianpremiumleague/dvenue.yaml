@@ -1,0 +1,22 @@
+product_name:  "Indian Premier League"
+path: "ipl"
+table_name: "dvenue"
+description: "Venues where Indian Premier League (IPL) matches are played."
+product_owner: "Monica Almeida"
+developer: "Monica Almeida"
+updated_at: "2026-11-17"
+
+colums:
+  - name: "venue_id"
+    type: "integer"
+    description: "Unique identifier for the venue."
+    primary_key: true
+    nullable: false
+    unique: true
+
+  - name: "venue_name"
+    type: "varchar(200)"
+    description: "Venue name."
+    primary_key: false
+    nullable: false
+    unique: true
