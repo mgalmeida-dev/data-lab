@@ -1,0 +1,128 @@
+product_name: "Indian Premier League"
+path: "ipl"
+table_name: "score_by_ball"
+description: "Delivery-level scores, extras, player roles, and dismissals for Indian Premier League (IPL) matches."
+product_owner: "Monica Almeida"
+developer: "Monica Almeida"
+updated_at: "2026-11-18"
+
+columns:
+  - name: "match_id"
+    type: "integer"
+    description: "Match identifier."
+    primary_key: true
+    foreign_key: true
+    nullable: false
+    unique: false
+
+  - name: "innings_no"
+    type: "integer"
+    description: "Innings number within the match."
+    primary_key: true
+    foreign_key: true
+    nullable: false
+    unique: false
+
+  - name: "ball_no"
+    type: "float"
+    description: "Delivery identifier within the innings in the source over."
+    primary_key: true
+    foreign_key: false
+    nullable: false
+    unique: false
+
+  - name: "striker_id"
+    type: "integer"
+    description: "Identifier of the batter facing the delivery."
+    primary_key: false
+    foreign_key: true
+    nullable: false
+    unique: false
+
+  - name: "non_striker_id"
+    type: "integer"
+    description: "Identifier of the batting partner not facing the delivery."
+    primary_key: false
+    foreign_key: true
+    nullable: false
+    unique: false
+
+  - name: "bowler_id"
+    type: "integer"
+    description: "Identifier of the player bowling the delivery."
+    primary_key: false
+    foreign_key: true
+    nullable: false
+    unique: false
+
+  - name: "runs_off_bat"
+    type: "integer"
+    description: "Runs credited to the batter from the delivery, excluding extras."
+    primary_key: false
+    foreign_key: false
+    nullable: false
+    unique: false
+
+  - name: "extras"
+    type: "integer"
+    description: "Total extra runs recorded for the delivery."
+    primary_key: false
+    foreign_key: false
+    nullable: false
+    unique: false
+
+  - name: "wides"
+    type: "integer"
+    description: "Extra runs recorded as wides for the delivery."
+    primary_key: false
+    foreign_key: false
+    nullable: true
+    unique: false
+
+  - name: "noballs"
+    type: "integer"
+    description: "Extra runs recorded as no-balls for the delivery."
+    primary_key: false
+    foreign_key: false
+    nullable: true
+    unique: false
+
+  - name: "byes"
+    type: "integer"
+    description: "Extra runs recorded as byes for the delivery."
+    primary_key: false
+    foreign_key: false
+    nullable: true
+    unique: false
+
+  - name: "legbyes"
+    type: "integer"
+    description: "Extra runs recorded as leg-byes for the delivery."
+    primary_key: false
+    foreign_key: false
+    nullable: true
+    unique: false
+
+  - name: "penalty"
+    type: "integer"
+    description: "Penalty runs recorded for the delivery."
+    primary_key: false
+    foreign_key: false
+    nullable: true
+    unique: false
+
+  - name: "wicket_type"
+    type: "varchar(200)"
+    description: "Type of dismissal recorded for the delivery."
+    primary_key: false
+    foreign_key: false
+    nullable: true
+    unique: false
+
+  - name: "dismissed_batsman_id"
+    type: "integer"
+    description: "Identifier of the dismissed batter."
+    primary_key: false
+    foreign_key: true
+    nullable: true
+    unique: false

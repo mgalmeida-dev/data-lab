@@ -1,0 +1,32 @@
+product_name:  "Indian Premier League"
+path: "ipl"
+table_name: "result"
+description: "Results of Indian Premier League (IPL) matches, including the winning team and the player awarded Player of the Match."
+product_owner: "Monica Almeida"
+developer: "Monica Almeida"
+updated_at: "2026-11-18"
+
+columns:
+  - name: "match_id"
+    type: "integer"
+    description: "Unique identifier of the match result."
+    primary_key: true
+    foreign_key: true
+    nullable: false
+    unique: true
+
+  - name: "winning_team_id"
+    type: "integer"
+    description: "Identifier of the winning team."
+    primary_key: false
+    foreign_key: true
+    nullable: false
+    unique: false
+
+  - name: "player_of_the_match_id"
+    type: "integer"
+    description: "Identifier of the player awarded Player of the Match."
+    primary_key: false
+    foreign_key: true
+    nullable: false
+    unique: false

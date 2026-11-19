@@ -1,0 +1,32 @@
+product_name:  "Indian Premier League"
+path: "ipl"
+table_name: "player"
+description: "Indian Premier League (IPL) players."
+product_owner: "Monica Almeida"
+developer: "Monica Almeida"
+updated_at: "2026-11-18"
+
+columns:
+  - name: "player_id"
+    type: "integer"
+    description: "Unique identifier for the player."
+    primary_key: true
+    foreign_key: false
+    nullable: false
+    unique: true
+
+  - name: "player_name"
+    type: "varchar(100)"
+    description: "Player name."
+    primary_key: false
+    foreign_key: false
+    nullable: false
+    unique: true
+
+  - name: "team_id"
+    type: "integer"
+    description: "Identifier of the player's team."
+    primary_key: false
+    foreign_key: true
+    nullable: false
+    unique: false

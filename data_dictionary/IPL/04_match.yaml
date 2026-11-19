@@ -1,0 +1,32 @@
+product_name:  "Indian Premier League"
+path: "ipl"
+table_name: "match"
+description: "Indian Premier League (IPL) matches, including their dates and venues."
+product_owner: "Monica Almeida"
+developer: "Monica Almeida"
+updated_at: "2026-11-18"
+
+columns:
+  - name: "match_id"
+    type: "integer"
+    description: "Unique identifier for the match."
+    primary_key: true
+    foreign_key: false
+    nullable: false
+    unique: true
+
+  - name: "match_date"
+    type: "varchar(10)"
+    description: "Date of the match."
+    primary_key: false
+    foreign_key: false
+    nullable: false
+    unique: false
+
+  - name: "venue_id"
+    type: "integer"
+    description: "Identifier of the venue where the match is played."
+    primary_key: false
+    foreign_key: true
+    nullable: false
+    unique: false

@@ -1,0 +1,40 @@
+product_name:  "Indian Premier League"
+path: "ipl"
+table_name: "innings"
+description: "Innings of Indian Premier League (IPL) matches, identifying the batting and bowling teams."
+product_owner: "Monica Almeida"
+developer: "Monica Almeida"
+updated_at: "2026-11-18"
+
+columns:
+  - name: "match_id"
+    type: "integer"
+    description: "Identifier of the match."
+    primary_key: true
+    foreign_key: true
+    nullable: false
+    unique: false
+
+  - name: "innings_no"
+    type: "integer"
+    description: "Innings number within a match."
+    primary_key: true
+    foreign_key: false
+    nullable: false
+    unique: false
+
+  - name: "batting_team_id"
+    type: "integer"
+    description: "Identifier of the batting team for the innings."
+    primary_key: false
+    foreign_key: true
+    nullable: false
+    unique: false
+
+  - name: "bowling_team_id"
+    type: "integer"
+    description: "Identifier of the bowling team for the innings."
+    primary_key: false
+    foreign_key: true
+    nullable: false
+    unique: false
