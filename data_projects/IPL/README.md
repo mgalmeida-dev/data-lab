@@ -15,7 +15,7 @@ praticar conceitos avançados de SQL por meio de um cenário próximo de um prob
 
 ## Contexto
 
-[Resumo do problema apresentado pelo professor.]
+
 
 ## Tecnologias
 
